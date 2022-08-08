@@ -25,27 +25,29 @@ function mean(arr) {
 
 // Mode
 function mode(arr) {
-	const modeObj = {}
-	let max = 0,
-		count = 0
+	const obj = {}
+	let max = 0
+	let count = 0
 
 	// Iterate through the array, adding each number to the JavaScript Object if it is not already there
 	for (let i = 0; i < arr.length; i++) {
 		const item = arr[i]
+
+		if (obj[item]) {
+			obj[item]++
 		// If the number has already been added, increment its key count
-		if (modeObj[item]) {
-			modeObj[item]++
 		} else {
-			modeObj[item] = 1
+			obj[item] = 1
 		}
+
 		// Check if the highest stored mode (count) is smaller than the processed number
-		if (count < modeObj[item]) {
+		if (count < obj[item]) {
 			// If smaller, then the count variable is changed to whatever the key for the current element is and the max value is changed to the current element. If greater, then do nothing.
 			max = item
-			count = modeObj[item]
+			count = obj[item]
 		}
 	}
-  // After the iteration is finished, max stores a number and count - the frequency, so we return max
+	// After the iteration is finished, max stores a number and count - the frequency, so we return max
 	return max
 }
 
