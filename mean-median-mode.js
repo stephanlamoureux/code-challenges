@@ -31,19 +31,19 @@ function mode(arr) {
 
 	// Iterate through the array, adding each number to the object if it's not already there
 	for (let i = 0; i < arr.length; i++) {
-		const item = arr[i]
+		const number = arr[i]
 
-		if (!obj[item]) {
-			obj[item] = 1
+		if (!obj.number) {
+			obj.number = 1
 		// If the number has already been added, increment its key count
 		} else {
-			obj[item]++
+			obj.number++
 		}
 
 		// Check if the highest stored mode (count) is smaller than the processed number
-		if (count < obj[item]) {
+		if (count < obj.number) {
 			// If smaller, then the count variable is changed to whatever the key for the current element is and the max value is changed to the current element. If greater, then do nothing.
-			count = obj[item]
+			count = obj.number
 			max = item
 		}
 	}
