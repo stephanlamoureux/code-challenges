@@ -29,7 +29,7 @@ function mode(arr) {
 	let max = 0
 	let count = 0
 
-	// Iterate through the array, adding each number to the JavaScript Object if it is not already there
+	// Iterate through the array, adding each number to the object if it's not already there
 	for (let i = 0; i < arr.length; i++) {
 		const item = arr[i]
 
