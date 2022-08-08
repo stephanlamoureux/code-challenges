@@ -33,11 +33,11 @@ function mode(arr) {
 	for (let i = 0; i < arr.length; i++) {
 		const item = arr[i]
 
-		if (obj[item]) {
-			obj[item]++
+		if (!obj[item]) {
+			obj[item] = 1
 		// If the number has already been added, increment its key count
 		} else {
-			obj[item] = 1
+			obj[item]++
 		}
 
 		// Check if the highest stored mode (count) is smaller than the processed number
