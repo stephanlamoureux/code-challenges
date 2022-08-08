@@ -44,7 +44,7 @@ function mode(arr) {
 		if (count < obj.number) {
 			// If smaller, then the count variable is changed to whatever the key for the current element is and the max value is changed to the current element. If greater, then do nothing.
 			count = obj.number
-			max = item
+			max = number
 		}
 	}
 	// After the iteration is finished, max stores a number and count - the frequency, so we return max
