@@ -33,17 +33,17 @@ function mode(arr) {
 	for (let i = 0; i < arr.length; i++) {
 		const number = arr[i]
 
-		if (!obj.number) {
-			obj.number = 1
+		if (!obj[number]) {
+			obj[number] = 1
 		// If the number has already been added, increment its key count
 		} else {
-			obj.number++
+			obj[number]++
 		}
 
 		// Check if the highest stored mode (count) is smaller than the processed number
-		if (count < obj.number) {
+		if (count < obj[number]) {
 			// If smaller, then the count variable is changed to whatever the key for the current element is and the max value is changed to the current element. If greater, then do nothing.
-			count = obj.number
+			count = obj[number]
 			max = number
 		}
 	}
