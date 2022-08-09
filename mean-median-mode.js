@@ -17,10 +17,12 @@ function median(arr) {
 // Mean
 function mean(arr) {
 	let sum = 0
+	let mean
 	for (let i = 0; i < arr.length; i++) {
 		sum += arr[i]
 	}
-	return sum / arr.length
+	mean = sum / arr.length
+	return Math.floor(mean)
 }
 
 // Mode
