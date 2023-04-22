@@ -9,29 +9,31 @@
 
 import re
 
+
 def validate(s):
-  correctLength = False # between 4 and 25 characters
-  firstLetter = False # has to be a letter
-  lastChar = False # cant be an underscore
-  allowedChars = False # only letters, numbers, and underscore
+    correctLength = False  # between 4 and 25 characters
+    firstLetter = False  # has to be a letter
+    lastChar = False  # cant be an underscore
+    allowedChars = False  # only letters, numbers, and underscore
 
-  if 3 < len(s) < 26:
-    correctLength = True
+    if 3 < len(s) < 26:
+        correctLength = True
 
-  if s[0].isalpha():
-    firstLetter = True
+    if s[0].isalpha():
+        firstLetter = True
 
-  if s[-1] != '_':
-    lastChar = True
+    if s[-1] != "_":
+        lastChar = True
 
-  if re.match("^[A-Za-z0-9_]*$", s):
-    allowedChars = True
+    if re.match("^[A-Za-z0-9_]*$", s):
+        allowedChars = True
 
-  if correctLength and firstLetter and lastChar and allowedChars:
-    return True
-  else:
-    return False
+    if correctLength and firstLetter and lastChar and allowedChars:
+        return True
+    else:
+        return False
 
-print(validate('abc_')) # False
-print(validate('1abckdas')) # False
-print(validate('abc123')) # True
+
+print(validate("abc_"))  # False
+print(validate("1abckdas"))  # False
+print(validate("abc123"))  # True

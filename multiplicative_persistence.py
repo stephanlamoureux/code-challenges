@@ -2,17 +2,22 @@
 
 from functools import reduce
 
+
 def multiplicativePersistence(num):
-  count = 0
-  num = str(num)
+    count = 0
+    num = str(num)
 
-  while len(num) > 1:
-    count += 1
-    # multiply all digits in the num string
-    # convert the string num to an integer first
-    # then convert it back to a string before updating the num variable
-    num = str(reduce(lambda a, b: int(a) * int(b), num))
+    # def multiply(a, b):
+    #     return int(a) * int(b)
 
-  return count
+    while len(num) > 1:
+        count += 1
+        # multiply all digits in the num string
+        # convert the string num to an integer first
+        # then convert it back to a string before updating the num variable
+        num = str(reduce(lambda a, b: int(a) * int(b), num))
 
-print(multiplicativePersistence(39)) # should return 3
+    return count
+
+
+print(multiplicativePersistence(39))  # should return 3
